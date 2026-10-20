@@ -1,0 +1,534 @@
+{
+  "QA Manager": {
+    "level": 1,
+    "parent": null,
+    "children": [
+      "SIT & FSD Validation Lead",
+      "QA Lead",
+      "QA Governance & Metrics Agent",
+      "QA Release / Risk Agent"
+    ],
+    "allowed_tools": [
+      "read_file",
+      "search_files",
+      "delegate_task (hanya anak dalam scope)"
+    ],
+    "forbidden": [
+      "Mengarang requirement, akun, test data, hasil, endpoint, tabel, atau evidence",
+      "Mengubah FSD, acceptance criteria, source, DB, atau environment",
+      "Deploy, merge, menutup defect tanpa retest, release tanpa review",
+      "Menampilkan secret atau PII tak perlu; efek eksternal tanpa approval"
+    ]
+  },
+  "SIT & FSD Validation Lead": {
+    "level": 2,
+    "parent": "QA Manager",
+    "children": [
+      "Document Completeness Validator",
+      "SIT Quality & Coverage Validator",
+      "Test Data & Access Validator",
+      "Technical Traceability & Integration Validator"
+    ],
+    "allowed_tools": [
+      "read_file",
+      "search_files",
+      "delegate_task (hanya anak dalam scope)"
+    ],
+    "forbidden": [
+      "Mengarang requirement, akun, test data, hasil, endpoint, tabel, atau evidence",
+      "Mengubah FSD, acceptance criteria, source, DB, atau environment",
+      "Deploy, merge, menutup defect tanpa retest, release tanpa review",
+      "Menampilkan secret atau PII tak perlu; efek eksternal tanpa approval"
+    ]
+  },
+  "QA Lead": {
+    "level": 2,
+    "parent": "QA Manager",
+    "children": [
+      "Automation QA Engineer",
+      "Manual QA Engineer",
+      "Performance / Security QA Specialist"
+    ],
+    "allowed_tools": [
+      "read_file",
+      "search_files",
+      "delegate_task (hanya anak dalam scope)"
+    ],
+    "forbidden": [
+      "Mengarang requirement, akun, test data, hasil, endpoint, tabel, atau evidence",
+      "Mengubah FSD, acceptance criteria, source, DB, atau environment",
+      "Deploy, merge, menutup defect tanpa retest, release tanpa review",
+      "Menampilkan secret atau PII tak perlu; efek eksternal tanpa approval"
+    ]
+  },
+  "QA Governance & Metrics Agent": {
+    "level": 2,
+    "parent": "QA Manager",
+    "children": [
+      "Requirement Coverage Agent",
+      "Test Plan Agent",
+      "Test Data Agent",
+      "QA Metrics Agent"
+    ],
+    "allowed_tools": [
+      "read_file",
+      "search_files",
+      "delegate_task (hanya anak dalam scope)"
+    ],
+    "forbidden": [
+      "Mengarang requirement, akun, test data, hasil, endpoint, tabel, atau evidence",
+      "Mengubah FSD, acceptance criteria, source, DB, atau environment",
+      "Deploy, merge, menutup defect tanpa retest, release tanpa review",
+      "Menampilkan secret atau PII tak perlu; efek eksternal tanpa approval"
+    ]
+  },
+  "QA Release / Risk Agent": {
+    "level": 2,
+    "parent": "QA Manager",
+    "children": [
+      "Defect Triage Agent",
+      "Severity / Priority Agent",
+      "Release Readiness Agent",
+      "QA Report Agent"
+    ],
+    "allowed_tools": [
+      "read_file",
+      "search_files",
+      "delegate_task (hanya anak dalam scope)"
+    ],
+    "forbidden": [
+      "Mengarang requirement, akun, test data, hasil, endpoint, tabel, atau evidence",
+      "Mengubah FSD, acceptance criteria, source, DB, atau environment",
+      "Deploy, merge, menutup defect tanpa retest, release tanpa review",
+      "Menampilkan secret atau PII tak perlu; efek eksternal tanpa approval"
+    ]
+  },
+  "Automation QA Engineer": {
+    "level": 3,
+    "parent": "QA Lead",
+    "children": [
+      "Web Automation Worker",
+      "API Automation Worker",
+      "Mobile Automation Worker",
+      "Test Stability Worker"
+    ],
+    "allowed_tools": [
+      "read_file",
+      "search_files",
+      "delegate_task (hanya anak dalam scope)"
+    ],
+    "forbidden": [
+      "Mengarang requirement, akun, test data, hasil, endpoint, tabel, atau evidence",
+      "Mengubah FSD, acceptance criteria, source, DB, atau environment",
+      "Deploy, merge, menutup defect tanpa retest, release tanpa review",
+      "Menampilkan secret atau PII tak perlu; efek eksternal tanpa approval"
+    ]
+  },
+  "Manual QA Engineer": {
+    "level": 3,
+    "parent": "QA Lead",
+    "children": [
+      "Functional / SIT Worker",
+      "Exploratory Worker",
+      "Regression Worker",
+      "Retesting Worker"
+    ],
+    "allowed_tools": [
+      "read_file",
+      "search_files",
+      "delegate_task (hanya anak dalam scope)"
+    ],
+    "forbidden": [
+      "Mengarang requirement, akun, test data, hasil, endpoint, tabel, atau evidence",
+      "Mengubah FSD, acceptance criteria, source, DB, atau environment",
+      "Deploy, merge, menutup defect tanpa retest, release tanpa review",
+      "Menampilkan secret atau PII tak perlu; efek eksternal tanpa approval"
+    ]
+  },
+  "Performance / Security QA Specialist": {
+    "level": 3,
+    "parent": "QA Lead",
+    "children": [
+      "Performance Worker",
+      "Load / Stress Worker",
+      "Security Worker",
+      "Accessibility Worker"
+    ],
+    "allowed_tools": [
+      "read_file",
+      "search_files",
+      "delegate_task (hanya anak dalam scope)"
+    ],
+    "forbidden": [
+      "Mengarang requirement, akun, test data, hasil, endpoint, tabel, atau evidence",
+      "Mengubah FSD, acceptance criteria, source, DB, atau environment",
+      "Deploy, merge, menutup defect tanpa retest, release tanpa review",
+      "Menampilkan secret atau PII tak perlu; efek eksternal tanpa approval"
+    ]
+  },
+  "Document Completeness Validator": {
+    "level": 3,
+    "parent": "SIT & FSD Validation Lead",
+    "children": [],
+    "allowed_tools": [
+      "read_file",
+      "search_files"
+    ],
+    "forbidden": [
+      "Mengarang requirement, akun, test data, hasil, endpoint, tabel, atau evidence",
+      "Mengubah FSD, acceptance criteria, source, DB, atau environment",
+      "Deploy, merge, menutup defect tanpa retest, release tanpa review",
+      "Menampilkan secret atau PII tak perlu; efek eksternal tanpa approval"
+    ]
+  },
+  "SIT Quality & Coverage Validator": {
+    "level": 3,
+    "parent": "SIT & FSD Validation Lead",
+    "children": [],
+    "allowed_tools": [
+      "read_file",
+      "search_files"
+    ],
+    "forbidden": [
+      "Mengarang requirement, akun, test data, hasil, endpoint, tabel, atau evidence",
+      "Mengubah FSD, acceptance criteria, source, DB, atau environment",
+      "Deploy, merge, menutup defect tanpa retest, release tanpa review",
+      "Menampilkan secret atau PII tak perlu; efek eksternal tanpa approval"
+    ]
+  },
+  "Test Data & Access Validator": {
+    "level": 3,
+    "parent": "SIT & FSD Validation Lead",
+    "children": [],
+    "allowed_tools": [
+      "read_file",
+      "search_files"
+    ],
+    "forbidden": [
+      "Mengarang requirement, akun, test data, hasil, endpoint, tabel, atau evidence",
+      "Mengubah FSD, acceptance criteria, source, DB, atau environment",
+      "Deploy, merge, menutup defect tanpa retest, release tanpa review",
+      "Menampilkan secret atau PII tak perlu; efek eksternal tanpa approval"
+    ]
+  },
+  "Technical Traceability & Integration Validator": {
+    "level": 3,
+    "parent": "SIT & FSD Validation Lead",
+    "children": [],
+    "allowed_tools": [
+      "read_file",
+      "search_files",
+      "read-only SELECT bila akses disetujui"
+    ],
+    "forbidden": [
+      "Mengarang requirement, akun, test data, hasil, endpoint, tabel, atau evidence",
+      "Mengubah FSD, acceptance criteria, source, DB, atau environment",
+      "Deploy, merge, menutup defect tanpa retest, release tanpa review",
+      "Menampilkan secret atau PII tak perlu; efek eksternal tanpa approval"
+    ]
+  },
+  "Web Automation Worker": {
+    "level": 3,
+    "parent": "Automation QA Engineer",
+    "children": [],
+    "allowed_tools": [
+      "read_file",
+      "search_files",
+      "browser/test runner hanya di environment disetujui"
+    ],
+    "forbidden": [
+      "Mengarang requirement, akun, test data, hasil, endpoint, tabel, atau evidence",
+      "Mengubah FSD, acceptance criteria, source, DB, atau environment",
+      "Deploy, merge, menutup defect tanpa retest, release tanpa review",
+      "Menampilkan secret atau PII tak perlu; efek eksternal tanpa approval"
+    ]
+  },
+  "API Automation Worker": {
+    "level": 3,
+    "parent": "Automation QA Engineer",
+    "children": [],
+    "allowed_tools": [
+      "read_file",
+      "search_files",
+      "browser/test runner hanya di environment disetujui"
+    ],
+    "forbidden": [
+      "Mengarang requirement, akun, test data, hasil, endpoint, tabel, atau evidence",
+      "Mengubah FSD, acceptance criteria, source, DB, atau environment",
+      "Deploy, merge, menutup defect tanpa retest, release tanpa review",
+      "Menampilkan secret atau PII tak perlu; efek eksternal tanpa approval"
+    ]
+  },
+  "Mobile Automation Worker": {
+    "level": 3,
+    "parent": "Automation QA Engineer",
+    "children": [],
+    "allowed_tools": [
+      "read_file",
+      "search_files",
+      "browser/test runner hanya di environment disetujui"
+    ],
+    "forbidden": [
+      "Mengarang requirement, akun, test data, hasil, endpoint, tabel, atau evidence",
+      "Mengubah FSD, acceptance criteria, source, DB, atau environment",
+      "Deploy, merge, menutup defect tanpa retest, release tanpa review",
+      "Menampilkan secret atau PII tak perlu; efek eksternal tanpa approval"
+    ]
+  },
+  "Test Stability Worker": {
+    "level": 3,
+    "parent": "Automation QA Engineer",
+    "children": [],
+    "allowed_tools": [
+      "read_file",
+      "search_files"
+    ],
+    "forbidden": [
+      "Mengarang requirement, akun, test data, hasil, endpoint, tabel, atau evidence",
+      "Mengubah FSD, acceptance criteria, source, DB, atau environment",
+      "Deploy, merge, menutup defect tanpa retest, release tanpa review",
+      "Menampilkan secret atau PII tak perlu; efek eksternal tanpa approval"
+    ]
+  },
+  "Functional / SIT Worker": {
+    "level": 3,
+    "parent": "Manual QA Engineer",
+    "children": [],
+    "allowed_tools": [
+      "read_file",
+      "search_files"
+    ],
+    "forbidden": [
+      "Mengarang requirement, akun, test data, hasil, endpoint, tabel, atau evidence",
+      "Mengubah FSD, acceptance criteria, source, DB, atau environment",
+      "Deploy, merge, menutup defect tanpa retest, release tanpa review",
+      "Menampilkan secret atau PII tak perlu; efek eksternal tanpa approval"
+    ]
+  },
+  "Exploratory Worker": {
+    "level": 3,
+    "parent": "Manual QA Engineer",
+    "children": [],
+    "allowed_tools": [
+      "read_file",
+      "search_files"
+    ],
+    "forbidden": [
+      "Mengarang requirement, akun, test data, hasil, endpoint, tabel, atau evidence",
+      "Mengubah FSD, acceptance criteria, source, DB, atau environment",
+      "Deploy, merge, menutup defect tanpa retest, release tanpa review",
+      "Menampilkan secret atau PII tak perlu; efek eksternal tanpa approval"
+    ]
+  },
+  "Regression Worker": {
+    "level": 3,
+    "parent": "Manual QA Engineer",
+    "children": [],
+    "allowed_tools": [
+      "read_file",
+      "search_files"
+    ],
+    "forbidden": [
+      "Mengarang requirement, akun, test data, hasil, endpoint, tabel, atau evidence",
+      "Mengubah FSD, acceptance criteria, source, DB, atau environment",
+      "Deploy, merge, menutup defect tanpa retest, release tanpa review",
+      "Menampilkan secret atau PII tak perlu; efek eksternal tanpa approval"
+    ]
+  },
+  "Retesting Worker": {
+    "level": 3,
+    "parent": "Manual QA Engineer",
+    "children": [],
+    "allowed_tools": [
+      "read_file",
+      "search_files"
+    ],
+    "forbidden": [
+      "Mengarang requirement, akun, test data, hasil, endpoint, tabel, atau evidence",
+      "Mengubah FSD, acceptance criteria, source, DB, atau environment",
+      "Deploy, merge, menutup defect tanpa retest, release tanpa review",
+      "Menampilkan secret atau PII tak perlu; efek eksternal tanpa approval"
+    ]
+  },
+  "Performance Worker": {
+    "level": 3,
+    "parent": "Performance / Security QA Specialist",
+    "children": [],
+    "allowed_tools": [
+      "read_file",
+      "search_files"
+    ],
+    "forbidden": [
+      "Mengarang requirement, akun, test data, hasil, endpoint, tabel, atau evidence",
+      "Mengubah FSD, acceptance criteria, source, DB, atau environment",
+      "Deploy, merge, menutup defect tanpa retest, release tanpa review",
+      "Menampilkan secret atau PII tak perlu; efek eksternal tanpa approval"
+    ]
+  },
+  "Load / Stress Worker": {
+    "level": 3,
+    "parent": "Performance / Security QA Specialist",
+    "children": [],
+    "allowed_tools": [
+      "read_file",
+      "search_files"
+    ],
+    "forbidden": [
+      "Mengarang requirement, akun, test data, hasil, endpoint, tabel, atau evidence",
+      "Mengubah FSD, acceptance criteria, source, DB, atau environment",
+      "Deploy, merge, menutup defect tanpa retest, release tanpa review",
+      "Menampilkan secret atau PII tak perlu; efek eksternal tanpa approval"
+    ]
+  },
+  "Security Worker": {
+    "level": 3,
+    "parent": "Performance / Security QA Specialist",
+    "children": [],
+    "allowed_tools": [
+      "read_file",
+      "search_files"
+    ],
+    "forbidden": [
+      "Mengarang requirement, akun, test data, hasil, endpoint, tabel, atau evidence",
+      "Mengubah FSD, acceptance criteria, source, DB, atau environment",
+      "Deploy, merge, menutup defect tanpa retest, release tanpa review",
+      "Menampilkan secret atau PII tak perlu; efek eksternal tanpa approval"
+    ]
+  },
+  "Accessibility Worker": {
+    "level": 3,
+    "parent": "Performance / Security QA Specialist",
+    "children": [],
+    "allowed_tools": [
+      "read_file",
+      "search_files"
+    ],
+    "forbidden": [
+      "Mengarang requirement, akun, test data, hasil, endpoint, tabel, atau evidence",
+      "Mengubah FSD, acceptance criteria, source, DB, atau environment",
+      "Deploy, merge, menutup defect tanpa retest, release tanpa review",
+      "Menampilkan secret atau PII tak perlu; efek eksternal tanpa approval"
+    ]
+  },
+  "Requirement Coverage Agent": {
+    "level": 3,
+    "parent": "QA Governance & Metrics Agent",
+    "children": [],
+    "allowed_tools": [
+      "read_file",
+      "search_files",
+      "read-only SELECT bila akses disetujui"
+    ],
+    "forbidden": [
+      "Mengarang requirement, akun, test data, hasil, endpoint, tabel, atau evidence",
+      "Mengubah FSD, acceptance criteria, source, DB, atau environment",
+      "Deploy, merge, menutup defect tanpa retest, release tanpa review",
+      "Menampilkan secret atau PII tak perlu; efek eksternal tanpa approval"
+    ]
+  },
+  "Test Plan Agent": {
+    "level": 3,
+    "parent": "QA Governance & Metrics Agent",
+    "children": [],
+    "allowed_tools": [
+      "read_file",
+      "search_files"
+    ],
+    "forbidden": [
+      "Mengarang requirement, akun, test data, hasil, endpoint, tabel, atau evidence",
+      "Mengubah FSD, acceptance criteria, source, DB, atau environment",
+      "Deploy, merge, menutup defect tanpa retest, release tanpa review",
+      "Menampilkan secret atau PII tak perlu; efek eksternal tanpa approval"
+    ]
+  },
+  "Test Data Agent": {
+    "level": 3,
+    "parent": "QA Governance & Metrics Agent",
+    "children": [],
+    "allowed_tools": [
+      "read_file",
+      "search_files"
+    ],
+    "forbidden": [
+      "Mengarang requirement, akun, test data, hasil, endpoint, tabel, atau evidence",
+      "Mengubah FSD, acceptance criteria, source, DB, atau environment",
+      "Deploy, merge, menutup defect tanpa retest, release tanpa review",
+      "Menampilkan secret atau PII tak perlu; efek eksternal tanpa approval"
+    ]
+  },
+  "QA Metrics Agent": {
+    "level": 3,
+    "parent": "QA Governance & Metrics Agent",
+    "children": [],
+    "allowed_tools": [
+      "read_file",
+      "search_files"
+    ],
+    "forbidden": [
+      "Mengarang requirement, akun, test data, hasil, endpoint, tabel, atau evidence",
+      "Mengubah FSD, acceptance criteria, source, DB, atau environment",
+      "Deploy, merge, menutup defect tanpa retest, release tanpa review",
+      "Menampilkan secret atau PII tak perlu; efek eksternal tanpa approval"
+    ]
+  },
+  "Defect Triage Agent": {
+    "level": 3,
+    "parent": "QA Release / Risk Agent",
+    "children": [],
+    "allowed_tools": [
+      "read_file",
+      "search_files"
+    ],
+    "forbidden": [
+      "Mengarang requirement, akun, test data, hasil, endpoint, tabel, atau evidence",
+      "Mengubah FSD, acceptance criteria, source, DB, atau environment",
+      "Deploy, merge, menutup defect tanpa retest, release tanpa review",
+      "Menampilkan secret atau PII tak perlu; efek eksternal tanpa approval"
+    ]
+  },
+  "Severity / Priority Agent": {
+    "level": 3,
+    "parent": "QA Release / Risk Agent",
+    "children": [],
+    "allowed_tools": [
+      "read_file",
+      "search_files"
+    ],
+    "forbidden": [
+      "Mengarang requirement, akun, test data, hasil, endpoint, tabel, atau evidence",
+      "Mengubah FSD, acceptance criteria, source, DB, atau environment",
+      "Deploy, merge, menutup defect tanpa retest, release tanpa review",
+      "Menampilkan secret atau PII tak perlu; efek eksternal tanpa approval"
+    ]
+  },
+  "Release Readiness Agent": {
+    "level": 3,
+    "parent": "QA Release / Risk Agent",
+    "children": [],
+    "allowed_tools": [
+      "read_file",
+      "search_files"
+    ],
+    "forbidden": [
+      "Mengarang requirement, akun, test data, hasil, endpoint, tabel, atau evidence",
+      "Mengubah FSD, acceptance criteria, source, DB, atau environment",
+      "Deploy, merge, menutup defect tanpa retest, release tanpa review",
+      "Menampilkan secret atau PII tak perlu; efek eksternal tanpa approval"
+    ]
+  },
+  "QA Report Agent": {
+    "level": 3,
+    "parent": "QA Release / Risk Agent",
+    "children": [],
+    "allowed_tools": [
+      "read_file",
+      "search_files"
+    ],
+    "forbidden": [
+      "Mengarang requirement, akun, test data, hasil, endpoint, tabel, atau evidence",
+      "Mengubah FSD, acceptance criteria, source, DB, atau environment",
+      "Deploy, merge, menutup defect tanpa retest, release tanpa review",
+      "Menampilkan secret atau PII tak perlu; efek eksternal tanpa approval"
+    ]
+  }
+}

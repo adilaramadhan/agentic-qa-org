@@ -1,0 +1,58 @@
+{
+  "validation_lead_cases": [
+    {
+      "case": "FSD, SIT +/- dan mapping terverifikasi",
+      "expected": "READY"
+    },
+    {
+      "case": "Enhancement DB tanpa table/column",
+      "expected": "NEED_REVISION"
+    },
+    {
+      "case": "Role tidak dijelaskan",
+      "expected": "NEED_REVISION"
+    },
+    {
+      "case": "Environment belum tersedia",
+      "expected": "BLOCKED"
+    },
+    {
+      "case": "Display-only, tanpa persistence",
+      "expected": "NOT_APPLICABLE_WITH_REASON; alasan wajib"
+    },
+    {
+      "case": "FSD table A, source table B",
+      "expected": "CONFLICTING; NEED_REVISION/BLOCKED; stop"
+    },
+    {
+      "case": "Happy only, akses dikontrol",
+      "expected": "NEED_REVISION"
+    },
+    {
+      "case": "API dependency down",
+      "expected": "BLOCKED; bukan otomatis PRODUCT_DEFECT"
+    },
+    {
+      "case": "Rerun lulus setelah gagal",
+      "expected": "INCONCLUSIVE; flaky analysis"
+    },
+    {
+      "case": "Resolved, belum retest",
+      "expected": "RETEST_REQUIRED; bukan RELEASE"
+    }
+  ],
+  "evaluation_metrics": [
+    "status decision accuracy",
+    "finding completeness",
+    "coverage",
+    "false READY/BLOCKED",
+    "hallucination",
+    "evidence compliance",
+    "secret leakage",
+    "defect classification",
+    "severity vs priority",
+    "handoff",
+    "schema compliance",
+    "conflict detection"
+  ]
+}

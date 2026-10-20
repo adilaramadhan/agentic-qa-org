@@ -1,0 +1,95 @@
+{
+  "states": {
+    "RECEIVED": [
+      "INTAKE_INCOMPLETE",
+      "VALIDATING"
+    ],
+    "INTAKE_INCOMPLETE": [
+      "VALIDATING",
+      "NEED_REVISION"
+    ],
+    "VALIDATING": [
+      "NEED_REVISION",
+      "BLOCKED",
+      "READY_FOR_PLANNING"
+    ],
+    "NEED_REVISION": [
+      "PIC_PROJECT_REVISION"
+    ],
+    "PIC_PROJECT_REVISION": [
+      "VALIDATING"
+    ],
+    "BLOCKED": [
+      "DEPENDENCY_RESOLUTION"
+    ],
+    "DEPENDENCY_RESOLUTION": [
+      "VALIDATING"
+    ],
+    "READY_FOR_PLANNING": [
+      "READY_FOR_EXECUTION"
+    ],
+    "READY_FOR_EXECUTION": [
+      "IN_PROGRESS"
+    ],
+    "IN_PROGRESS": [
+      "EXECUTION_COMPLETE"
+    ],
+    "EXECUTION_COMPLETE": [
+      "RETEST_REQUIRED",
+      "REGRESSION_REQUIRED",
+      "RELEASE_REVIEW"
+    ],
+    "RETEST_REQUIRED": [
+      "RETEST_IN_PROGRESS"
+    ],
+    "RETEST_IN_PROGRESS": [
+      "REGRESSION_REQUIRED",
+      "RELEASE_REVIEW"
+    ],
+    "REGRESSION_REQUIRED": [
+      "REGRESSION_IN_PROGRESS"
+    ],
+    "REGRESSION_IN_PROGRESS": [
+      "RELEASE_REVIEW"
+    ],
+    "RELEASE_REVIEW": [
+      "RELEASE",
+      "CONDITIONAL_RELEASE",
+      "NO_RELEASE",
+      "WAIVED"
+    ],
+    "WAIVED": [
+      "CLOSED"
+    ],
+    "RELEASE": [
+      "CLOSED"
+    ],
+    "CONDITIONAL_RELEASE": [
+      "CLOSED"
+    ],
+    "NO_RELEASE": [
+      "CLOSED"
+    ],
+    "CLOSED": []
+  },
+  "validators": [
+    "Document Completeness Validator",
+    "SIT Quality & Coverage Validator",
+    "Test Data & Access Validator",
+    "Technical Traceability & Integration Validator"
+  ],
+  "activation": "on-demand, relevant scope only",
+  "pilot_web_sit": [
+    "QA Manager",
+    "SIT & FSD Validation Lead",
+    "QA Governance & Metrics Agent",
+    "QA Lead",
+    "Functional / SIT Worker",
+    "Web Automation Worker",
+    "API Automation Worker",
+    "Defect Triage Agent",
+    "Retesting Worker",
+    "Release Readiness Agent",
+    "QA Manager"
+  ]
+}

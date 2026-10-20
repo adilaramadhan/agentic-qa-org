@@ -1,0 +1,46 @@
+{
+  "task_metadata": {
+    "task_id": "",
+    "project": "MISSING",
+    "module": "MISSING",
+    "feature": "MISSING",
+    "pic_project": "MISSING",
+    "target_release": "MISSING",
+    "target_environment": "MISSING",
+    "risk_level": "MISSING"
+  },
+  "documents": {
+    "fsd_reference": "MISSING",
+    "fsd_version": "MISSING",
+    "sit_happy_reference": "MISSING",
+    "sit_happy_version": "MISSING",
+    "sit_negative_reference": "MISSING",
+    "sit_negative_version": "MISSING",
+    "acceptance_criteria": [],
+    "change_history": [],
+    "scope_enhancement": "MISSING"
+  },
+  "access": {
+    "test_account_reference": "MISSING",
+    "role": "MISSING",
+    "permission": [],
+    "menu_access": [],
+    "api_access": []
+  },
+  "test_data": {
+    "existing_data_reference": "MISSING",
+    "new_data_requirement": "MISSING",
+    "input_source": "MISSING",
+    "data_creation_method": "MISSING",
+    "cleanup_requirement": "MISSING"
+  },
+  "technical_traceability": {
+    "screen": [], "menu": [], "api": [], "service": [], "business_logic": [], "database": [],
+    "stored_procedure": [], "trigger": [], "job": [], "queue": [], "file_exchange": [], "external_system": []
+  },
+  "requirement_coverage": [],
+  "technical_impact": "MISSING",
+  "environment_status": "MISSING",
+  "dependencies": [],
+  "known_limitations": []
+}

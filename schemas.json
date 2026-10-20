@@ -1,0 +1,515 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "pic_input": {
+      "type": "object",
+      "required": [
+        "task_metadata",
+        "documents",
+        "access",
+        "test_data",
+        "technical_traceability",
+        "requirement_coverage",
+        "technical_impact",
+        "dependencies",
+        "environment_status"
+      ],
+      "properties": {
+        "task_metadata": {
+          "type": "object",
+          "required": [
+            "project",
+            "module",
+            "feature",
+            "pic_project",
+            "target_release",
+            "target_environment",
+            "risk_level"
+          ],
+          "properties": {
+            "project": {
+              "type": "string"
+            },
+            "module": {
+              "type": "string"
+            },
+            "feature": {
+              "type": "string"
+            },
+            "pic_project": {
+              "type": "string"
+            },
+            "target_release": {
+              "type": "string"
+            },
+            "target_environment": {
+              "type": "string"
+            },
+            "risk_level": {
+              "type": "string"
+            }
+          }
+        },
+        "documents": {
+          "type": "object",
+          "required": [
+            "fsd_reference",
+            "fsd_version",
+            "sit_happy_reference",
+            "sit_happy_version",
+            "sit_negative_reference",
+            "sit_negative_version",
+            "acceptance_criteria",
+            "change_history",
+            "scope_enhancement"
+          ],
+          "properties": {
+            "fsd_reference": {
+              "type": "string"
+            },
+            "fsd_version": {
+              "type": "string"
+            },
+            "sit_happy_reference": {
+              "type": "string"
+            },
+            "sit_happy_version": {
+              "type": "string"
+            },
+            "sit_negative_reference": {
+              "type": "string"
+            },
+            "sit_negative_version": {
+              "type": "string"
+            },
+            "acceptance_criteria": {
+              "type": "array"
+            },
+            "change_history": {
+              "type": "array"
+            },
+            "scope_enhancement": {
+              "type": "string"
+            }
+          }
+        },
+        "access": {
+          "type": "object",
+          "required": [
+            "test_account_reference",
+            "role",
+            "permission"
+          ],
+          "properties": {
+            "test_account_reference": {
+              "type": "string"
+            },
+            "role": {
+              "type": "string"
+            },
+            "permission": {
+              "type": "array"
+            }
+          }
+        },
+        "test_data": {
+          "type": "object",
+          "required": [
+            "input_source",
+            "data_creation_method",
+            "cleanup_requirement"
+          ],
+          "properties": {
+            "input_source": {
+              "type": "string"
+            },
+            "data_creation_method": {
+              "type": "string"
+            },
+            "cleanup_requirement": {
+              "type": "string"
+            }
+          }
+        },
+        "technical_traceability": {
+          "type": [
+            "object",
+            "string"
+          ]
+        },
+        "requirement_coverage": {
+          "type": "array"
+        },
+        "technical_impact": {
+          "type": "string"
+        },
+        "dependencies": {
+          "type": "array"
+        },
+        "environment_status": {
+          "enum": [
+            "AVAILABLE",
+            "UNAVAILABLE"
+          ]
+        }
+      }
+    },
+    "envelope": {
+      "type": "object",
+      "required": [
+        "task_id",
+        "parent_task_id",
+        "role_name",
+        "agent_name",
+        "phase",
+        "status",
+        "decision",
+        "input_artifacts",
+        "output_artifacts",
+        "findings",
+        "test_results",
+        "risks",
+        "dependencies",
+        "assumptions",
+        "missing_information",
+        "handoff"
+      ],
+      "properties": {
+        "task_id": {
+          "type": "string"
+        },
+        "parent_task_id": {
+          "type": "string"
+        },
+        "role_name": {
+          "type": "string"
+        },
+        "agent_name": {
+          "type": "string"
+        },
+        "phase": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "decision": {
+          "type": "string"
+        },
+        "input_artifacts": {
+          "type": "array"
+        },
+        "output_artifacts": {
+          "type": "array"
+        },
+        "findings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/finding"
+          }
+        },
+        "test_results": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/test_result"
+          }
+        },
+        "risks": {
+          "type": "array"
+        },
+        "dependencies": {
+          "type": "array"
+        },
+        "assumptions": {
+          "type": "array"
+        },
+        "missing_information": {
+          "type": "array"
+        },
+        "handoff": {
+          "type": "object",
+          "required": [
+            "next_role",
+            "next_action",
+            "required_input",
+            "blocking_reason"
+          ],
+          "properties": {
+            "next_role": {
+              "type": "string"
+            },
+            "next_action": {
+              "type": "string"
+            },
+            "required_input": {
+              "type": "string"
+            },
+            "blocking_reason": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "finding": {
+      "type": "object",
+      "required": [
+        "finding_id",
+        "category",
+        "severity",
+        "status",
+        "description",
+        "source_reference",
+        "evidence_reference",
+        "required_action",
+        "owner",
+        "exit_criteria"
+      ],
+      "properties": {
+        "finding_id": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "severity": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "source_reference": {
+          "type": "string"
+        },
+        "evidence_reference": {
+          "type": "array"
+        },
+        "required_action": {
+          "type": "string"
+        },
+        "owner": {
+          "type": "string"
+        },
+        "exit_criteria": {
+          "type": "string"
+        }
+      }
+    },
+    "test_result": {
+      "type": "object",
+      "required": [
+        "requirement_id",
+        "test_case_id",
+        "status",
+        "expected_result",
+        "actual_result",
+        "environment",
+        "user_role_reference",
+        "test_data_reference",
+        "evidence_reference",
+        "defect_id"
+      ],
+      "properties": {
+        "requirement_id": {
+          "type": "string"
+        },
+        "test_case_id": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "expected_result": {
+          "type": "string"
+        },
+        "actual_result": {
+          "type": "string"
+        },
+        "environment": {
+          "type": "string"
+        },
+        "user_role_reference": {
+          "type": "string"
+        },
+        "test_data_reference": {
+          "type": "string"
+        },
+        "evidence_reference": {
+          "type": "array"
+        },
+        "defect_id": {
+          "type": "string"
+        }
+      }
+    },
+    "defect": {
+      "type": "object",
+      "required": [
+        "defect_id",
+        "title",
+        "task_id",
+        "requirement_id",
+        "test_case_id",
+        "environment",
+        "user_role_reference",
+        "preconditions",
+        "steps_to_reproduce",
+        "expected_result",
+        "actual_result",
+        "evidence_reference",
+        "severity",
+        "priority",
+        "impact",
+        "frequency",
+        "suspected_component",
+        "category",
+        "owner",
+        "status",
+        "retest_required",
+        "regression_required"
+      ],
+      "properties": {
+        "defect_id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "task_id": {
+          "type": "string"
+        },
+        "requirement_id": {
+          "type": "string"
+        },
+        "test_case_id": {
+          "type": "string"
+        },
+        "environment": {
+          "type": "string"
+        },
+        "user_role_reference": {
+          "type": "string"
+        },
+        "preconditions": {
+          "type": "array"
+        },
+        "steps_to_reproduce": {
+          "type": "array"
+        },
+        "expected_result": {
+          "type": "string"
+        },
+        "actual_result": {
+          "type": "string"
+        },
+        "evidence_reference": {
+          "type": "array"
+        },
+        "severity": {
+          "type": "string"
+        },
+        "priority": {
+          "type": "string"
+        },
+        "impact": {
+          "type": "string"
+        },
+        "frequency": {
+          "type": "string"
+        },
+        "suspected_component": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "owner": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "retest_required": {
+          "type": "boolean"
+        },
+        "regression_required": {
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "pic_required": {
+    "task_metadata": [
+      "project",
+      "module",
+      "feature",
+      "pic_project",
+      "target_release",
+      "target_environment",
+      "risk_level"
+    ],
+    "documents": [
+      "fsd_reference",
+      "fsd_version",
+      "sit_happy_reference",
+      "sit_happy_version",
+      "sit_negative_reference",
+      "sit_negative_version",
+      "acceptance_criteria",
+      "change_history",
+      "scope_enhancement"
+    ],
+    "access": [
+      "test_account_reference",
+      "role",
+      "permission"
+    ],
+    "test_data": [
+      "input_source",
+      "data_creation_method",
+      "cleanup_requirement"
+    ]
+  },
+  "test_data_categories": {
+    "Positive": [
+      "Normal",
+      "Minimum",
+      "Maximum",
+      "Typical"
+    ],
+    "Negative": [
+      "Invalid format",
+      "Invalid value",
+      "Unauthorized",
+      "Duplicate"
+    ],
+    "Boundary": [
+      "Minimum - 1",
+      "Minimum",
+      "Maximum",
+      "Maximum + 1"
+    ],
+    "Empty": [
+      "Null",
+      "Blank",
+      "Mandatory kosong",
+      "Optional kosong"
+    ],
+    "Combination": [
+      "Cross-module",
+      "Multiple condition",
+      "Role",
+      "Permission",
+      "Data state"
+    ],
+    "Volume": [
+      "Small",
+      "Medium",
+      "Large",
+      "Peak"
+    ]
+  }
+}
